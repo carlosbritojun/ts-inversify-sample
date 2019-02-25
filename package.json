@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/carlosbritojun/ts-inversify-sample#readme",
   "dependencies": {
+    "express": "^4.16.4",
+    "inversify": "^5.0.1",
+    "inversify-express-utils": "^6.3.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.4.0",
     "ts-guid": "^1.0.11"
   }
 }
