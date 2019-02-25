@@ -1,25 +1,26 @@
 import "reflect-metadata";
+import { inject } from "inversify";
+
 import { Observable } from "rxjs";
 
 import { ICategoryRepository } from "../../domain/repositories/category.repository";
 import { Category } from "../../domain/models/category.model";
+import { NeDBUtils } from "../db/nedb.utils";
 
 export class CategoryRepository implements ICategoryRepository {
 
-    constructor() {
-        
-    }
+    constructor(@inject("NeDBUtils") private readonly db: NeDBUtils) { }
 
     create(entity: Category): Observable<boolean> {
-        return null;
+       return this.db.insert(entity);
     }    
     
     update(id: string, entity: Category): Observable<boolean> {
-        throw new Error("Method not implemented.");
+        return this.db.update(id, entity);
     }
     
     delete(id: string): Observable<boolean> {
-        throw new Error("Method not implemented.");
+       return this.db.remove(id);
     }
     
     get(): Observable<Category[]>;
@@ -27,6 +28,7 @@ export class CategoryRepository implements ICategoryRepository {
     get(id: string): Observable<Category>;
     
     get(id?: any): any {
-        throw new Error("Method not implemented.");
+        if (id) return this.db.findOne(id);
+        else  return this.db.findAll();
     }
 }
