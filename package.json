@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/carlosbritojun/ts-inversify-sample/issues"
   },
-  "homepage": "https://github.com/carlosbritojun/ts-inversify-sample#readme"
+  "homepage": "https://github.com/carlosbritojun/ts-inversify-sample#readme",
+  "dependencies": {
+    "ts-guid": "^1.0.11"
+  }
 }
