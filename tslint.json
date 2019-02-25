@@ -13,7 +13,12 @@
         "no-empty":false,
         "no-consecutive-blank-lines":false,
         "quotemark":false,
-        "no-empty-interface": false
+        "no-empty-interface": false,
+        "unified-signatures": false,
+        "trailing-comma": false,
+        "no-shadowed-variable": false,
+        "object-literal-sort-keys":false,
+        "no-console": false
     },
     "rulesDirectory": []
 }

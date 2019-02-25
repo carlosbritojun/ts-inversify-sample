@@ -1,6 +1,6 @@
 import { newGuid } from "ts-guid";
 
-import { Entity } from "../../shared/entity";
+import { Entity } from "../../shared/entity.model";
 import { Category } from "./category.model";
 import { Email } from "../vos/email.vo";
 import { Phone } from "../vos/phone.vo";

@@ -1,6 +1,6 @@
 import { newGuid } from "ts-guid";
 
-import { Entity } from "../../shared/entity";
+import { Entity } from "../../shared/entity.model";
 
 export class Category extends Entity {
     

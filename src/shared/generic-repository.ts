@@ -5,6 +5,6 @@ export interface IRepository<T, Tid> {
     update(id: Tid, entity: T): Observable<boolean>;
     delete(id: Tid): Observable<boolean>;
 
-    get(id: Tid): Observable<T>;
     get(): Observable<T[]>;
+    get(id: Tid): Observable<T>;
 }
